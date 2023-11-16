@@ -62,26 +62,26 @@ export const trendingItems = [
 export const categories = [
   {
     src: require('../assets/woman.png'),
-    label: 'Woman',
+    label: 'Mujer',
   },
   {
     src: require('../assets/man.png'),
-    label: 'Man',
+    label: 'Hombre',
   },
   {
     src: require('../assets/kids.png'),
-    label: 'Kids',
+    label: 'Niños',
   },
   {
     src: require('../assets/accessories.png'),
-    label: 'Accessories',
+    label: 'Accesorios',
   },
   {
     src: require('../assets/watches.png'),
-    label: 'Watches',
+    label: 'Relojeria',
   },
   {
     src: require('../assets/dresses.png'),
-    label: 'Dresses',
+    label: 'Vestidos',
   },
 ];
