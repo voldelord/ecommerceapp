@@ -28,7 +28,7 @@ const WelcomeScreen = ({navigation}: Props) => {
         />
       </View>
       <TouchableOpacity onPress={handleRegisterPress}>
-        <Text style={styles.parraph}>¿Ya eres Usuario? Registrate</Text>
+        <Text style={styles.parraph}>¿No eres Usuario? Registrate</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );

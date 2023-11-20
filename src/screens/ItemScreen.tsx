@@ -7,6 +7,8 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import {StackNavigationProp} from '@react-navigation/stack';
 
 import Header from '../components/Header';
 
@@ -35,6 +37,10 @@ const ItemScreen: FC = ({route}: any) => {
 
   const [activeColor, setActiveColor] = useState('blue');
   const [activeSize, setActiveSize] = useState('M');
+  const navigation =
+    useNavigation<
+      StackNavigationProp<Record<string, object>, 'NombreDeTuStackNavigator'>
+    >();
 
   return (
     <View style={styles.container}>
@@ -80,11 +86,16 @@ const ItemScreen: FC = ({route}: any) => {
           </View>
         </View>
         <View style={{marginTop: 32, alignItems: 'center'}}>
-          <View style={styles.buyButton}>
+          <TouchableOpacity
+            style={styles.buyButton}
+            onPress={() => {
+              // Aquí puedes navegar a la página deseada al hacer clic en el botón
+              navigation.navigate('CartScreen'); // Reemplaza 'OtroScreen' con el nombre de tu pantalla destino
+            }}>
             <Text style={{color: 'white', fontSize: 20, fontWeight: '700'}}>
               Add to cart
             </Text>
-          </View>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
