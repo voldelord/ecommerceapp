@@ -11,6 +11,7 @@ import LoginScreen from './src/screens/LoginScreen';
 import WelcomeScreen from './src/screens/WelcomeScreen';
 import RegisterScreen from './src/screens/RegisterScreen';
 import CartScreen from './src/screens/CartScreen';
+import PaymentScreen from './src/screens/PaymentScreen';
 
 function App(): JSX.Element {
   const Stack = createNativeStackNavigator();
@@ -28,6 +29,7 @@ function App(): JSX.Element {
         <Stack.Screen name="Item" component={ItemScreen} />
         <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
         <Stack.Screen name="CartScreen" component={CartScreen} />
+        <Stack.Screen name="PaymentScreen" component={PaymentScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

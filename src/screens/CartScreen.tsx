@@ -12,22 +12,27 @@ const CartScreen = ({navigation}: Props) => {
       </View>
       <Text style={styles.title}>Artículo agregado al carrito</Text>
       <Text style={styles.description}>¡Listo para realizar tu compra!</Text>
-      <View style={styles.buttonContainer}>
+      {/* Agregar dos botones con imágenes debajo del texto */}
+      <View style={styles.imageRow}>
         <TouchableOpacity
-          style={styles.checkoutButton}
           onPress={() => {
-            // Aquí puedes navegar a la página deseada al hacer clic en el botón
-            navigation.navigate('HomeScreen'); // Reemplaza 'OtroScreen' con el nombre de tu pantalla destino
+            // Navegar a la primera página deseada al hacer clic en la imagen
+            navigation.navigate('HomeScreen');
           }}>
-          <Text style={styles.buttonText}>Ir al Carrito</Text>
+          <Image
+            style={styles.additionalImage}
+            source={require('../assets/leftarrow.png')}
+          />
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.checkoutButton}
           onPress={() => {
-            // Aquí puedes navegar a la página deseada al hacer clic en el botón
-            navigation.navigate('HomeScreen'); // Reemplaza 'OtroScreen' con el nombre de tu pantalla destino
+            // Navegar a la segunda página deseada al hacer clic en la imagen
+            navigation.navigate('PaymentScreen');
           }}>
-          <Text style={styles.buttonText}>Volver a Comprar</Text>
+          <Image
+            style={styles.additionalImage}
+            source={require('../assets/payment.png')}
+          />
         </TouchableOpacity>
       </View>
     </View>
@@ -50,21 +55,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginBottom: 30,
   },
-  buttonContainer: {
-    flexDirection: 'row',
-    marginTop: 20,
-  },
-  checkoutButton: {
-    backgroundColor: 'skyblue',
-    padding: 15,
-    borderRadius: 8,
-    marginRight: 10,
-  },
-  buttonText: {
-    color: 'white',
-    textAlign: 'center',
-    fontWeight: 'bold',
-  },
   imageContainer: {
     justifyContent: 'center',
     alignItems: 'center',
@@ -73,6 +63,17 @@ const styles = StyleSheet.create({
     width: 200,
     height: 200,
     resizeMode: 'contain',
+  },
+  // Estilos para la fila de botones con imágenes adicionales
+  imageRow: {
+    flexDirection: 'row',
+    marginTop: 20,
+  },
+  additionalImage: {
+    width: 80,
+    height: 80,
+    resizeMode: 'contain',
+    marginHorizontal: 50,
   },
 });
 
