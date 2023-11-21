@@ -112,7 +112,7 @@ const PaymentScreen = ({navigation}: Props) => {
         onPress={() => {
           // Puedes agregar lógica para realizar el pago
           // Aquí puedes navegar a la pantalla de confirmación de pago
-          navigation.navigate('PaymentConfirmationScreen');
+          navigation.navigate('PaymentSucecefull');
         }}>
         <Text style={styles.payButtonText}>Pagar</Text>
       </TouchableOpacity>
