@@ -10,6 +10,7 @@ import Carousel from '../components/Carousel';
 import Trending from '../components/Trending';
 import Categories from '../components/Categories';
 import MostSale from '../components/MostSale';
+import Accessories from '../components/Accessories';
 
 const HomeScreen: FC = () => {
   return (
@@ -19,6 +20,7 @@ const HomeScreen: FC = () => {
           <Carousel />
           <Trending />
           <MostSale />
+          <Accessories />
           <Categories />
         </View>
       </ScrollView>

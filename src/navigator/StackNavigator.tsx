@@ -11,6 +11,8 @@ import PaymentScreen from '../screens/PaymentScreen';
 import MostSaleScreen from '../screens/MostSaleScreen';
 import {Tabs} from './Tabs';
 import PaymentSucecefull from '../screens/PaymentSucecefull';
+import AccessoriesScreen from '../screens/AccessoriesScreen';
+import ProfileEditScreen from '../screens/ProfileEditScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +30,8 @@ export const StackNavigator = () => {
       <Stack.Screen name="MostSale" component={MostSaleScreen} />
       <Stack.Screen name="HomeScreen" component={Tabs} />
       <Stack.Screen name="PaymentSucecefull" component={PaymentSucecefull} />
+      <Stack.Screen name="Accessories" component={AccessoriesScreen} />
+      <Stack.Screen name="ProfileEdit" component={ProfileEditScreen} />
     </Stack.Navigator>
   );
 };

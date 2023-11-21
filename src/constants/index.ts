@@ -128,3 +128,36 @@ export const categories = [
     label: 'Vestidos',
   },
 ];
+
+export const accessories = [
+  {
+    label: 'Cap Black',
+    price: '15.49$',
+    src: require('../assets/Accesorios/1.jpg'),
+  },
+  {
+    label: 'Glasses',
+    price: '9.25$',
+    src: require('../assets/Accesorios/2.jpg'),
+  },
+  {
+    label: 'Chain',
+    price: '14.25$',
+    src: require('../assets/Accesorios/3.jpg'),
+  },
+  {
+    label: 'Black Glasses',
+    price: '9.14$',
+    src: require('../assets/Accesorios/4.jpg'),
+  },
+  {
+    label: 'Gold Chain',
+    price: '25.47$',
+    src: require('../assets/Accesorios/5.jpg'),
+  },
+  {
+    label: 'Wallet',
+    price: '9.47$',
+    src: require('../assets/Accesorios/6.jpg'),
+  },
+];
