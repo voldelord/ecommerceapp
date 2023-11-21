@@ -2,17 +2,17 @@ export const carouselItems = [
   {
     label: 'Pant 1',
     price: '35.49$',
-    src: require('../assets/card-1.jpg'),
+    src: require('../assets/card9.jpg'),
   },
   {
     label: 'Pant 2',
     price: '44.99$',
-    src: require('../assets/card-2.jpg'),
+    src: require('../assets/card10.jpg'),
   },
   {
     label: 'Pant 3',
     price: '49.99$',
-    src: require('../assets/card-3.jpg'),
+    src: require('../assets/card11.jpg'),
   },
 ];
 
@@ -56,6 +56,49 @@ export const trendingItems = [
     label: 'Pant 3',
     price: '49.99$',
     src: require('../assets/card-3.jpg'),
+  },
+];
+
+export const mostsaleItems = [
+  {
+    label: 'Shirt 1',
+    price: '35.49$',
+    src: require('../assets/card1.jpg'),
+  },
+  {
+    label: 'Shirt 2',
+    price: '44.99$',
+    src: require('../assets/card2.jpg'),
+  },
+  {
+    label: 'Shirt 3',
+    price: '49.99$',
+    src: require('../assets/card3.jpg'),
+  },
+  {
+    label: 'Shirt 4',
+    price: '12.49$',
+    src: require('../assets/card4.jpg'),
+  },
+  {
+    label: 'Shirt 5',
+    price: '22.99$',
+    src: require('../assets/card5.jpg'),
+  },
+  {
+    label: 'Pant 1',
+    price: '35.49$',
+    src: require('../assets/card6.jpg'),
+  },
+  {
+    label: 'Pant 2',
+    price: '44.99$',
+    src: require('../assets/card7.jpg'),
+  },
+  {
+    label: 'Pant 3',
+    price: '49.99$',
+    src: require('../assets/card8.jpg'),
   },
 ];
 

@@ -9,6 +9,7 @@ const screen = dimensions.height;
 import Carousel from '../components/Carousel';
 import Trending from '../components/Trending';
 import Categories from '../components/Categories';
+import MostSale from '../components/MostSale';
 
 const HomeScreen: FC = () => {
   return (
@@ -17,6 +18,7 @@ const HomeScreen: FC = () => {
         <View style={styles.container}>
           <Carousel />
           <Trending />
+          <MostSale />
           <Categories />
         </View>
       </ScrollView>

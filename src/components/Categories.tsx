@@ -1,5 +1,12 @@
 import React, {FC} from 'react';
-import {FlatList, Image, StyleSheet, Text, View} from 'react-native';
+import {
+  FlatList,
+  Image,
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
 import {categories} from '../constants';
@@ -11,6 +18,7 @@ interface CategoriesProps {
 interface CategoriesCardProps {
   label: string;
   src: any;
+  onPress: () => void;
 }
 
 const Categories: FC<CategoriesProps> = ({onScreen}) => {
@@ -29,7 +37,17 @@ const Categories: FC<CategoriesProps> = ({onScreen}) => {
       <FlatList
         data={categories}
         renderItem={({item}) => (
-          <CategoriesCard label={item.label} src={item.src} />
+          <TouchableOpacity
+            onPress={() => {
+              // Handle onPress for each category here
+              console.log(`Category ${item.label} pressed`);
+            }}>
+            <CategoriesCard
+              label={item.label}
+              src={item.src}
+              onPress={() => {}}
+            />
+          </TouchableOpacity>
         )}
         style={{marginLeft: 16, marginRight: 16}}
       />
@@ -37,15 +55,17 @@ const Categories: FC<CategoriesProps> = ({onScreen}) => {
   );
 };
 
-const CategoriesCard: FC<CategoriesCardProps> = ({label, src}) => {
+const CategoriesCard: FC<CategoriesCardProps> = ({label, src, onPress}) => {
   return (
     <View style={styles.cardContainer}>
-      <View style={{flexDirection: 'row', alignItems: 'center'}}>
-        <Image source={src} style={{width: 32, height: 32}} />
-        <Text style={{fontSize: 18, fontWeight: '600', marginLeft: 16}}>
-          {label}
-        </Text>
-      </View>
+      <TouchableOpacity onPress={onPress}>
+        <View style={{flexDirection: 'row', alignItems: 'center'}}>
+          <Image source={src} style={{width: 32, height: 32}} />
+          <Text style={{fontSize: 18, fontWeight: '600', marginLeft: 16}}>
+            {label}
+          </Text>
+        </View>
+      </TouchableOpacity>
       <View style={{alignItems: 'center'}}>
         <Image
           style={{width: 32, height: 32}}
